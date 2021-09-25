@@ -64,9 +64,6 @@ public class NoticiaService {
             List<Element> conteudo = document.select("div.article-content > p");
 
             conteudo.forEach(c -> paragrafo.add(c.text()));
-            /*for (Element c : conteudo) {
-                paragrafo.add(c.text());
-            }*/
 
             noticia = new Noticia(urlNoticia, titulo.text(), subtitulo.text(), autor.text(), formatarData(data), paragrafo);
 
